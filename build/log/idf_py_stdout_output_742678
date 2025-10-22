@@ -1,0 +1,47 @@
+-- IDF_TARGET is not set, guessed 'esp32p4' from sdkconfig '/home/nestor/esp/esp32_p4_tropic01/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/nestor/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20240530/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/nestor/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20240530/riscv32-esp-elf/bin/riscv32-esp-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/nestor/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20240530/riscv32-esp-elf/bin/riscv32-esp-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32p4
+-- Project sdkconfig file /home/nestor/esp/esp32_p4_tropic01/sdkconfig
+Loading defaults file /home/nestor/esp/esp32_p4_tropic01/sdkconfig.defaults...
+warning: unknown kconfig symbol 'MBEDTLS_PSA_CRYPTO_C' assigned to 'y' in /home/nestor/esp/esp32_p4_tropic01/sdkconfig.defaults
+warning: unknown kconfig symbol 'MBEDTLS_MD_C' assigned to 'y' in /home/nestor/esp/esp32_p4_tropic01/sdkconfig.defaults
+warning: unknown kconfig symbol 'MBEDTLS_SHA256_C' assigned to 'y' in /home/nestor/esp/esp32_p4_tropic01/sdkconfig.defaults
+-- Adding linker script /home/nestor/esp/esp-idf/components/riscv/ld/rom.api.ld
+-- Found Python3: /home/nestor/.espressif/python_env/idf5.3_py3.12_env/bin/python (found version "3.12.3") found components: Interpreter 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "tropic_full.c" version: 1
+-- Adding linker script /home/nestor/esp/esp32_p4_tropic01/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/nestor/esp/esp32_p4_tropic01/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.api.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.rvfp.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.wdt.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.systimer.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.version.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/esp_rom/esp32p4/ld/esp32p4.rom.newlib.ld
+-- Adding linker script /home/nestor/esp/esp-idf/components/soc/esp32p4/ld/esp32p4.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json libtropic log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: /home/nestor/esp/esp-idf/components/app_trace /home/nestor/esp/esp-idf/components/app_update /home/nestor/esp/esp-idf/components/bootloader /home/nestor/esp/esp-idf/components/bootloader_support /home/nestor/esp/esp-idf/components/bt /home/nestor/esp/esp-idf/components/cmock /home/nestor/esp/esp-idf/components/console /home/nestor/esp/esp-idf/components/cxx /home/nestor/esp/esp-idf/components/driver /home/nestor/esp/esp-idf/components/efuse /home/nestor/esp/esp-idf/components/esp-tls /home/nestor/esp/esp-idf/components/esp_adc /home/nestor/esp/esp-idf/components/esp_app_format /home/nestor/esp/esp-idf/components/esp_bootloader_format /home/nestor/esp/esp-idf/components/esp_coex /home/nestor/esp/esp-idf/components/esp_common /home/nestor/esp/esp-idf/components/esp_driver_ana_cmpr /home/nestor/esp/esp-idf/components/esp_driver_cam /home/nestor/esp/esp-idf/components/esp_driver_dac /home/nestor/esp/esp-idf/components/esp_driver_gpio /home/nestor/esp/esp-idf/components/esp_driver_gptimer /home/nestor/esp/esp-idf/components/esp_driver_i2c /home/nestor/esp/esp-idf/components/esp_driver_i2s /home/nestor/esp/esp-idf/components/esp_driver_isp /home/nestor/esp/esp-idf/components/esp_driver_jpeg /home/nestor/esp/esp-idf/components/esp_driver_ledc /home/nestor/esp/esp-idf/components/esp_driver_mcpwm /home/nestor/esp/esp-idf/components/esp_driver_parlio /home/nestor/esp/esp-idf/components/esp_driver_pcnt /home/nestor/esp/esp-idf/components/esp_driver_ppa /home/nestor/esp/esp-idf/components/esp_driver_rmt /home/nestor/esp/esp-idf/components/esp_driver_sdio /home/nestor/esp/esp-idf/components/esp_driver_sdm /home/nestor/esp/esp-idf/components/esp_driver_sdmmc /home/nestor/esp/esp-idf/components/esp_driver_sdspi /home/nestor/esp/esp-idf/components/esp_driver_spi /home/nestor/esp/esp-idf/components/esp_driver_touch_sens /home/nestor/esp/esp-idf/components/esp_driver_tsens /home/nestor/esp/esp-idf/components/esp_driver_uart /home/nestor/esp/esp-idf/components/esp_driver_usb_serial_jtag /home/nestor/esp/esp-idf/components/esp_eth /home/nestor/esp/esp-idf/components/esp_event /home/nestor/esp/esp-idf/components/esp_gdbstub /home/nestor/esp/esp-idf/components/esp_hid /home/nestor/esp/esp-idf/components/esp_http_client /home/nestor/esp/esp-idf/components/esp_http_server /home/nestor/esp/esp-idf/components/esp_https_ota /home/nestor/esp/esp-idf/components/esp_https_server /home/nestor/esp/esp-idf/components/esp_hw_support /home/nestor/esp/esp-idf/components/esp_lcd /home/nestor/esp/esp-idf/components/esp_local_ctrl /home/nestor/esp/esp-idf/components/esp_mm /home/nestor/esp/esp-idf/components/esp_netif /home/nestor/esp/esp-idf/components/esp_netif_stack /home/nestor/esp/esp-idf/components/esp_partition /home/nestor/esp/esp-idf/components/esp_pm /home/nestor/esp/esp-idf/components/esp_psram /home/nestor/esp/esp-idf/components/esp_ringbuf /home/nestor/esp/esp-idf/components/esp_rom /home/nestor/esp/esp-idf/components/esp_system /home/nestor/esp/esp-idf/components/esp_timer /home/nestor/esp/esp-idf/components/esp_vfs_console /home/nestor/esp/esp-idf/components/esp_wifi /home/nestor/esp/esp-idf/components/espcoredump /home/nestor/esp/esp-idf/components/esptool_py /home/nestor/esp/esp-idf/components/fatfs /home/nestor/esp/esp-idf/components/freertos /home/nestor/esp/esp-idf/components/hal /home/nestor/esp/esp-idf/components/heap /home/nestor/esp/esp-idf/components/http_parser /home/nestor/esp/esp-idf/components/idf_test /home/nestor/esp/esp-idf/components/ieee802154 /home/nestor/esp/esp-idf/components/json /home/nestor/esp/esp32_p4_tropic01/components/libtropic /home/nestor/esp/esp-idf/components/log /home/nestor/esp/esp-idf/components/lwip /home/nestor/esp/esp32_p4_tropic01/main /home/nestor/esp/esp-idf/components/mbedtls /home/nestor/esp/esp-idf/components/mqtt /home/nestor/esp/esp-idf/components/newlib /home/nestor/esp/esp-idf/components/nvs_flash /home/nestor/esp/esp-idf/components/nvs_sec_provider /home/nestor/esp/esp-idf/components/openthread /home/nestor/esp/esp-idf/components/partition_table /home/nestor/esp/esp-idf/components/protobuf-c /home/nestor/esp/esp-idf/components/protocomm /home/nestor/esp/esp-idf/components/pthread /home/nestor/esp/esp-idf/components/riscv /home/nestor/esp/esp-idf/components/sdmmc /home/nestor/esp/esp-idf/components/soc /home/nestor/esp/esp-idf/components/spi_flash /home/nestor/esp/esp-idf/components/spiffs /home/nestor/esp/esp-idf/components/tcp_transport /home/nestor/esp/esp-idf/components/ulp /home/nestor/esp/esp-idf/components/unity /home/nestor/esp/esp-idf/components/usb /home/nestor/esp/esp-idf/components/vfs /home/nestor/esp/esp-idf/components/wear_levelling /home/nestor/esp/esp-idf/components/wifi_provisioning /home/nestor/esp/esp-idf/components/wpa_supplicant
+-- Configuring done (5.0s)
+-- Generating done (0.5s)
+-- Build files have been written to: /home/nestor/esp/esp32_p4_tropic01/build

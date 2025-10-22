@@ -1,0 +1,14 @@
+# --- Use PSA Crypto (needed for X25519 w/ Mbed TLS v3) ---
+CONFIG_MBEDTLS_PSA_CRYPTO_C=y
+
+# --- Crypto primitives used by this app ---
+CONFIG_MBEDTLS_GCM_C=y
+CONFIG_MBEDTLS_MD_C=y
+CONFIG_MBEDTLS_SHA256_C=y
+
+# (No legacy ECDH / private access needed anymore.)
+# CONFIG_MBEDTLS_ALLOW_PRIVATE_ACCESS is not required
+# CONFIG_MBEDTLS_ECDH_LEGACY_CONTEXT is not required
+
+# Logs
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
