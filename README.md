@@ -180,7 +180,7 @@ All successful L3 responses start with **`0xC3`** (“OK”). Some firmware buil
 ### Memory, Config, and Counters (Quick Tour)
 
 * **Read config (R/I):** Request `[CMD, addr_le16]` → `0xC3 …data…`
-* **Memory read/write/erase:** Usual pattern with slot addresses and short padding bytes. The working Python reference shows the exact payload layouts.
+* **Memory read/write/erase:** Usual pattern with slot addresses and short padding bytes. The working reference shows the exact payload layouts.
 * **Monotonic counters:** Initialize, update (decrement), get. Indices are limited, so bounds-check against constants.
 
 These are handy for device personalization, anti-rollback, and secure storage adjuncts—once you have the encrypted tunnel in place.
@@ -274,8 +274,8 @@ Here’s the full script with commentary:
 ## Practical Tips
 
 * Keep SPI modest during bring-up; later you can increase it after you’re confident the electrical path is clean.
-* Log short hex dumps of both ciphertext and plaintext (never private keys) during development; it makes it straightforward to compare against the Python reference.
-* When in doubt, re-run the Python code on the same host message and compare the GCM inputs and outputs. If your nonces, keys, and counters match, the bytes will match too.
+* Log short hex dumps of both ciphertext and plaintext (never private keys) during development; it makes it straightforward to compare against the code reference.
+* When in doubt, re-run the refrence code on the same host message and compare the GCM inputs and outputs. If your nonces, keys, and counters match, the bytes will match too.
 
 ---
 
@@ -303,6 +303,6 @@ Once you see the pattern, the TROPIC01 protocol feels pleasantly mechanical:
 * A disciplined, modern secure channel with a simple counter-nonce rule.
 * Straightforward L3 commands that do exactly what they say.
 
-The most common snags—CRC placement, handshake hash order, AES-GCM key direction, and nonce discipline—are easy to avoid if you follow the steps here. Combine this document with your working C demo and the Python reference, and you’ll have a reliable, testable foundation for secure key operations on ESP32-P4.
+The most common snags—CRC placement, handshake hash order, AES-GCM key direction, and nonce discipline—are easy to avoid if you follow the steps here. Combine this document with your working C demo and the reference, and you’ll have a reliable, testable foundation for secure key operations on ESP32-P4.
 
 If you’d like this as a printable PDF or a developer-facing README tailored to your repository, I can format it accordingly.
