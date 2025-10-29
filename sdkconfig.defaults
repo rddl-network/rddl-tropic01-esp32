@@ -2,8 +2,8 @@
 CONFIG_MBEDTLS_PSA_CRYPTO_C=y
 
 # --- Crypto primitives used by this app ---
+CONFIG_MBEDTLS_AES_C=y
 CONFIG_MBEDTLS_GCM_C=y
-CONFIG_MBEDTLS_MD_C=y
 CONFIG_MBEDTLS_SHA256_C=y
 
 # (No legacy ECDH / private access needed anymore.)
@@ -12,3 +12,10 @@ CONFIG_MBEDTLS_SHA256_C=y
 
 # Logs
 CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+
+# --- Flash Configuration ---
+# Enable GigaDevice flash chip support
+CONFIG_SPI_FLASH_SUPPORT_GD_CHIP=y
+
+# Set flash size to 8MB (8192KB) to match detected hardware
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
