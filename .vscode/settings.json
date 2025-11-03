@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        "cstdint": "c"
+        "cstdint": "c",
+        "ed25519.h": "c",
+        "lt_x25519.h": "c",
+        "libtropic_common.h": "c",
+        "blake256.h": "c",
+        "hasher.h": "c",
+        "aesgcm.h": "c"
     }
 }
