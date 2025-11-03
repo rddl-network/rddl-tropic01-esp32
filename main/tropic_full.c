@@ -46,20 +46,20 @@
 #include "mbedtls/ecdsa.h"
 
 // X25519 (via curve25519 helpers from ed25519 lib)
-//#include "ed25519.h"
-#include "lt_x25519.h"
+#include "ed25519.h"
+
 
 // Declare ed25519_verify if not in header
 extern int ed25519_verify(const unsigned char *signature, const unsigned char *message, size_t message_len, const unsigned char *public_key);
 
 /* ─────────── Board pins / SPI ─────────── */
-#define PIN_NUM_MOSI   7
-#define PIN_NUM_MISO   2
-#define PIN_NUM_CLK    6
-#define PIN_NUM_CS     10
+#define PIN_NUM_MOSI   23
+#define PIN_NUM_MISO   22
+#define PIN_NUM_CLK    21
+#define PIN_NUM_CS     20
 
 #define SPI_HOST_USED  SPI2_HOST
-#define SPI_CLOCK_HZ   1000000    // Slower for debugging
+#define SPI_CLOCK_HZ   1000000
 #define SPI_MODE       0
 
 /* ─────────── Timing / sizes / log ─────────── */
@@ -250,9 +250,8 @@ static bool tropic_wait_ready(void) {
     for (int i = 0; i < MAX_POLL_RETRIES; i++) {
         uint8_t tx = REQ_ID_GET_RESPONSE, chip = 0;
         cs_low();
-        esp_err_t ret = spi_rw(&tx, &chip, 1);
+        (void)spi_rw(&tx, &chip, 1);
         cs_high();
-        ESP_LOGI(TAG, "Poll %d: tx=0x%02X -> chip=0x%02X (ret=%d)", i+1, tx, chip, ret);
         if (chip == CHIP_STATUS_READY) {
             ESP_LOGI(TAG, "Ready (CHIP_STATUS=0x%02X)", chip);
             return true;
@@ -525,7 +524,7 @@ static int x25519_keygen(rng_t *rng, uint8_t out_priv[32], uint8_t out_pub[32]) 
 }
 
 static void x25519_scalarmult(uint8_t *shared, const uint8_t *priv, const uint8_t *pub) {
-    lt_X25519(shared, priv, pub);
+    curve25519_scalarmult(shared, priv, pub);
 }
 
 #if 0
